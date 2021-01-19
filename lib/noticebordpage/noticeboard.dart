@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:schoolmanagementapp/assests/colors.dart';
-import 'package:schoolmanagementapp/examinationpage/examinationcard.dart';
+import 'package:schoolmanagementapp/noticebordpage/noticelist.dart';
 
-class ExaminationPage extends StatelessWidget {
+class NoticeBoardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+   return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
@@ -31,13 +31,10 @@ class ExaminationPage extends StatelessWidget {
             ),
           )
         ],
+      
+
       ),
-      body: Container(
-        padding:  EdgeInsets.only(top: 10),
-        child:SingleChildScrollView(
-          child:ExaminationCard(),
-           ))
-    );
+      body: NoticeList(),
+   );
   }
 }
-

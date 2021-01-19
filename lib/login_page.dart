@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:schoolmanagementapp/assests/colors.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -32,7 +33,8 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20.0,
-                      color: Colors.lightBlue[900]),
+                      color: MyColors.purplecolor,
+                ),
                 ),
                 Container(
                   child: Form(
@@ -84,6 +86,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
+              
               ]),
             
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:schoolmanagementapp/assests/colors.dart';
 
 class ExaminationCard extends StatefulWidget {
   @override
@@ -94,7 +95,7 @@ class _ExaminationCardWidgetState extends State<ExaminationCardWidget> {
             height: 20,
             width: 20,
             decoration: BoxDecoration(
-                shape: BoxShape.circle, color: Colors.lightBlue[900]),
+                shape: BoxShape.circle, color:  MyColors.purplecolor),
             child: Center(
               child: Icon(
                 Icons.arrow_forward_ios,
