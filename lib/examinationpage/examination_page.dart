@@ -31,36 +31,7 @@ class ExaminationPage extends StatelessWidget {
           )
         ],
       ),
-      body: ExaminationType(),
-      bottomNavigationBar: BottomNavigationBar(
-        elevation: 10,
-        backgroundColor: Colors.white,
-        items: [
-          BottomNavigationBarItem(
-            
-            icon: Icon(Icons.home,color: Colors.black,),
-           label: 'Home'
-          ),
-                    BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-           label: 'Home'
-          ),
-                    BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-           label: 'Home'
-          ),
-                    BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-           label: 'Home'
-          ),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(onPressed: null,
-      child: Icon(Icons.home,color: Colors.black,),
-      elevation: 0.0,
-      backgroundColor: Colors.white,
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
+      body: ExaminationType(), 
     );
   }
 }
