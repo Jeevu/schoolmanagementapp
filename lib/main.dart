@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:schoolmanagementapp/examination_page.dart';
-import 'package:schoolmanagementapp/login_page.dart';
+import 'package:schoolmanagementapp/examinationpage/examination_page.dart';
 void main() {
   runApp(MyApp());
 }
