@@ -61,7 +61,7 @@ class ProfilePage extends StatelessWidget {
                                       image: DecorationImage(
                                           fit: BoxFit.cover,
                                           image: AssetImage(
-                                              'assets/profileimage.png'))),
+                                              'assets/Assets/superadmin-2.png'))),
                                 ),
                                 Text(
                                   'Shophia Lodge',

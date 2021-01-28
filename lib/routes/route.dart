@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:schoolmanagementapp/screens/examination_page.dart';
+import 'package:schoolmanagementapp/screens/examination_schedule.dart';
 import 'package:schoolmanagementapp/screens/homepage.dart';
-import 'package:schoolmanagementapp/screens/login_page.dart';
-import 'package:schoolmanagementapp/screens/profile_page.dart';
+import 'package:schoolmanagementapp/screens/notice_board.dart';
+
 
 class MyRoute extends StatelessWidget {
   @override
@@ -11,7 +12,9 @@ class MyRoute extends StatelessWidget {
       routes: {
         '/':(context)=>HomePage(),
         '/examinationpage':(context)=>ExaminationPage(),
-        '/homepage':(context)=>HomePage()
+        '/homepage':(context)=>HomePage(),
+        '/examinationschedule':(context)=>ExaminationSchedule(),
+        '/noticeboard':(context)=>NoticeBoardPage(),
       },
     );
   }

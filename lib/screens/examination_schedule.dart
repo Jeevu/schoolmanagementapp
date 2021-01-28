@@ -11,10 +11,10 @@ class ExaminationSchedule extends StatelessWidget {
   Widget build(BuildContext context) {
     var dt = DateTime.utc(2020, 08, 03, 08, 10,00);
     var size = MediaQuery.of(context).size;
-  var newFormat = DateTime.parse("2020-08-03 10:00:00Z");
-  print(newFormat.day);
-  print(dt.add(new Duration(days: 12)).day);
-  print(dt.month.toString());
+  // var newFormat = DateTime.parse("2020-08-03 10:00:00Z");
+  // print(newFormat.day);
+  // print(dt.add(new Duration(days: 12)).day);
+  // print(dt.month.toString());
     return SafeArea(
         child: SingleChildScrollView(
       child: Container(
