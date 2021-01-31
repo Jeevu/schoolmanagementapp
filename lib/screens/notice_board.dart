@@ -15,7 +15,7 @@ class NoticeBoardPage extends StatelessWidget {
           ),
         ),
         title: Text(
-          'Examination',
+          'Notice',
           style: TextStyle(
             color: Colors.black,
           ),

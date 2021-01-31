@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:schoolmanagementapp/screens/examination_page.dart';
 import 'package:schoolmanagementapp/screens/examination_schedule.dart';
 import 'package:schoolmanagementapp/screens/homepage.dart';
+import 'package:schoolmanagementapp/screens/login_page.dart';
 import 'package:schoolmanagementapp/screens/notice_board.dart';
+import 'package:schoolmanagementapp/screens/profile_page.dart';
 
 
 class MyRoute extends StatelessWidget {
@@ -13,8 +15,9 @@ class MyRoute extends StatelessWidget {
         '/':(context)=>HomePage(),
         '/examinationpage':(context)=>ExaminationPage(),
         '/homepage':(context)=>HomePage(),
-        '/examinationschedule':(context)=>ExaminationSchedule(),
+        '/examinationschedule':(context)=>ExaminationSchedule(ModalRoute.of(context).settings.arguments),
         '/noticeboard':(context)=>NoticeBoardPage(),
+        '/profilepage':(context)=>ProfilePage(),
       },
     );
   }

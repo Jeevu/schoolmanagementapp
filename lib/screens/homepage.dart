@@ -11,13 +11,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _currentindex = 3;
+  ExamType arguments;
+  int _currentindex = 2;
   List<Widget> _pages = <Widget>[
-    Home(),
-    NoticeBoardPage(),
     ExaminationPage(),
+    NoticeBoardPage(),
+    Home(),
     ProfilePage(),
-    ExaminationSchedule(),
+    //ExaminationSchedule(),
   ];
 
   @override
@@ -28,14 +29,14 @@ class _HomePageState extends State<HomePage> {
         children: _pages,
         //Home(),
       ),
- 
-     // persistentFooterButtons: [],
+
+      // persistentFooterButtons: [],
       bottomNavigationBar: Container(
-              child: BottomNavigationBar(
+        child: BottomNavigationBar(
           selectedItemColor: MyColors.customcolor,
           unselectedItemColor: MyColors.customcolor,
           selectedFontSize: 12,
-        //  unselectedFontSize: ,
+          //  unselectedFontSize: ,
           showUnselectedLabels: true,
           unselectedLabelStyle: TextStyle(color: MyColors.customcolor),
           type: BottomNavigationBarType.fixed,
@@ -48,39 +49,32 @@ class _HomePageState extends State<HomePage> {
           },
           items: [
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home,
-                 // color: Colors.black,
-                ),
-                label: 'Syllabus',
+              icon: Image.asset('assets/Assets/syllabusicon.png'),
+              
+              //  Icon(
+              //   Icons.home,
+              //   // color: Colors.black,
+              // ),
+              label: 'Syllabus',
               //  backgroundColor: Colors.black
-                ),
+            ),
             BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-             //   color: Colors.black,
-              ),
+              icon:  Image.asset('assets/Assets/noticeicon.png'),
               label: 'Notice',
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
-           //     color: Colors.black,
+                //     color: Colors.black,
               ),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-           //     color: Colors.black,
-              ),
+              icon: Image.asset('assets/Assets/profileicon.png'),
               label: 'Profile',
             ),
             BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-            //    color: Colors.black,
-              ),
+              icon: Image.asset('assets/Assets/editicon.png'),
               label: 'Edit',
             ),
           ],
@@ -137,14 +131,14 @@ class HomeState extends State<Home> {
           children: [
             Center(
               child: Padding(
-                padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
+                padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
                 child: Text(
                   "Welcome, Sophia Shrestha!",
                   style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
                 ),
               ),
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 5),
             Card(
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.95,
@@ -153,22 +147,57 @@ class HomeState extends State<Home> {
                   alignment: WrapAlignment.spaceEvenly,
                   spacing: 30,
                   children: [
+
                     //Change Icon and function for each chip
                     drawChip(
-                        "Class Routine", Icon(Icons.person), getAttendance),
-                    drawChip("Attendance", Icon(Icons.person), getAttendance),
-                    drawChip("Examination", Icon(Icons.person), getAttendance),
+                        "Class Routine",
+                        Image.asset('assets/Home-Icons/routine.png'),
+                        null
+                        
+                        ),
                     drawChip(
-                        "Syllabus", Icon(Icons.person_add_alt), getAttendance),
+                        "Attendance",
+                        Image.asset('assets/Home-Icons/attendance.png'),
+                        null
+                        ),
                     drawChip(
-                        "Results", Icon(Icons.person_add_alt), getAttendance),
+                        "Examination",
+                        Image.asset('assets/Home-Icons/quiz.png'),
+                        null
+                        ),
                     drawChip(
-                        "Events", Icon(Icons.calendar_today), getAttendance),
-                    drawChip("Notice Board", Icon(Icons.notifications_none),
-                        getAttendance),
-                    drawChip("Profile", Icon(Icons.group), getAttendance),
+                        "Syllabus",
+                        Image.asset('assets/Home-Icons/syllabus.png'),
+                        null
+                        ),
                     drawChip(
-                        "Assignments", Icon(Icons.assignment), getAttendance),
+                        "Results",
+                        Image.asset('assets/Home-Icons/tasks.png'),
+                      null
+                        ),
+                    drawChip(
+                        "Events",
+                        Image.asset('assets/Home-Icons/calendar.png'),
+                       null
+                        ),
+                    drawChip(
+                        "Notice Board",
+                        Image.asset('assets/Home-Icons/noticeboard.png'),
+                        null
+                        ),
+                    drawChip(
+                        "Profile",
+                        Image.asset('assets/Home-Icons/reading-book.png'),
+                      // getAttendance(
+                      //   context
+                      // )
+                      null
+                        ),
+                    drawChip(
+                        "Assignments",
+                        Image.asset('assets/Home-Icons/student.png'),
+                        null
+                    ),
                   ],
                 ),
               ),
@@ -187,13 +216,14 @@ class HomeState extends State<Home> {
                           borderRadius: BorderRadius.all(Radius.circular(5))),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
+                            height: 30,
+                            width: 30,
                             padding: EdgeInsets.all(3),
-                            child: Icon(
-                              Icons.clean_hands,
-                              size: 20,
+                            child: Center(
+                              child: Image.asset('assets/Home-Icons/pray.png'),
                             ),
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
@@ -204,11 +234,8 @@ class HomeState extends State<Home> {
                           Text("Morning Prayer",
                               style: TextStyle(
                                   fontWeight: FontWeight.w500, fontSize: 10)),
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.play_circle_outline,
-                            size: 15,
-                          ),
+                         // SizedBox(width: 10),
+                           Image.asset('assets/Home-Icons/iconplaycircle.png'),
                         ],
                       ),
                     ),
@@ -225,14 +252,13 @@ class HomeState extends State<Home> {
                           borderRadius: BorderRadius.all(Radius.circular(5))),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Container(
+                            height: 30,
+                            width: 30,
                             padding: EdgeInsets.all(3),
-                            child: Icon(
-                              Icons.clean_hands,
-                              size: 20,
-                            ),
+                            child: Image.asset('assets/Home-Icons/nepal.png'),
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               color: MyColors.customcolor,
@@ -242,11 +268,8 @@ class HomeState extends State<Home> {
                           Text("National Anthem",
                               style: TextStyle(
                                   fontWeight: FontWeight.w500, fontSize: 10)),
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.play_circle_outline,
-                            size: 15,
-                          ),
+                         // SizedBox(width: 10),
+                          Image.asset('assets/Home-Icons/iconplaycircle.png'),
                         ],
                       ),
                     ),
@@ -261,31 +284,40 @@ class HomeState extends State<Home> {
   }
 }
 
-void getAttendance() {}
+ getAttendance(BuildContext context) {
+  Navigator.pushNamed(context, "/profilepage");
+}
 
-Column drawChip(String text, Icon ic, Function getAttend) {
-  return Column(
-    children: [
-      Container(
-        height: 75,
-        width: 75,
-    
-        child: Center(
-          child: InkWell(child: ic, onTap: getAttend),
+InkWell drawChip(String text, Image ic,Function getAttend) {
+  return InkWell(
+      child: Column(
+      children: [
+        Container(
+          height: 75,
+          width: 75,
+          child: Center(
+            child: Container(
+                //  margin: EdgeInsets.all(20),
+                height: 35,
+                width: 35,
+                child: ic),
+            ),
+          
+          decoration:
+              BoxDecoration(shape: BoxShape.circle, color: MyColors.customcolor),
         ),
-        decoration:
-            BoxDecoration(shape: BoxShape.circle, color: MyColors.customcolor),
-      ),
-      SizedBox(height: 10),
-      Text(
-        text,
-        style: TextStyle(
-            color: MyColors.customcolor,
-            fontWeight: FontWeight.w800,
-            fontSize: 14),
-      ),
-      SizedBox(height: 30)
-    ],
+        SizedBox(height: 10),
+        Text(
+          text,
+          style: TextStyle(
+              color: MyColors.customcolor,
+              fontWeight: FontWeight.w800,
+              fontSize: 14),
+        ),
+        SizedBox(height: 30)
+      ],
+    ),
+    onTap: getAttend,
   );
 }
 
