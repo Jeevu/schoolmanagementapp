@@ -40,7 +40,7 @@ void paint(Canvas canvas, Size size) {
 
 canvas.drawCircle(Offset(0.0, 10.0), 5, _paint);
 canvas.drawLine(Offset(0.0, 15.0), Offset(0.0,80.0), _paint);
-canvas.drawCircle(Offset(0.0, 85.0), 5, _paint);
+//canvas.drawCircle(Offset(0.0, 85.0), 5, _paint);
 // canvas.drawCircle(Offset(0.0, 55.0), 5, _paint);
 // canvas.drawLine(Offset(0.0, 60), Offset(0.0, 100), _paint);
 

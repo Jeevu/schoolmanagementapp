@@ -23,6 +23,7 @@ class ExaminationSchedule extends StatelessWidget {
     // print(newFormat.day);
     // print(dt.add(new Duration(days: 12)).day);
     // print(dt.month.toString());
+   
     return Scaffold(
       body: SafeArea(
           child: SingleChildScrollView(
@@ -66,7 +67,8 @@ class ExaminationSchedule extends StatelessWidget {
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
-                        Icon(Icons.notifications_none),
+                        Image.asset('assets/Assets/nitificationicon.png'),
+
                       ],
                     );
                   },
@@ -75,8 +77,9 @@ class ExaminationSchedule extends StatelessWidget {
             ),
             Center(
               child: Container(
-                  width: size.width * 0.7,
-                  height: 50,
+                padding: EdgeInsets.only(top:10),
+                  width: size.width * 0.8,
+                  height: size.height*0.07,
                   child: Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
@@ -101,7 +104,7 @@ class ExaminationSchedule extends StatelessWidget {
                           width: 20,
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: MyColors.purplecolor),
+                              color: MyColors.customcolor),
                           child: Center(
                             child: Icon(
                               Icons.arrow_forward_ios,
@@ -176,7 +179,7 @@ class ExaminationSchedule extends StatelessWidget {
                               'Subject',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.grey[100]),
+                                  color: Colors.grey),
                             ),
                           ]),
                     ),
@@ -196,8 +199,8 @@ class ExaminationSchedule extends StatelessWidget {
                             TimeLineWigdet(),
                             SizedBox(width: 10),
                             Container(
-                              height: size.height * 0.1,
-                              width: 250,
+                              height: 75,
+                              width: size.width*0.75,
                               child: Card(
                                   // margin: EdgeInsets.all(10),
                                   shape: RoundedRectangleBorder(
@@ -242,8 +245,146 @@ class ExaminationSchedule extends StatelessWidget {
                             TimeLineWigdet(),
                             SizedBox(width: 10),
                             Container(
-                              height: size.height * 0.1,
-                              width: 250,
+                              height: 75,
+                              width:  size.width*0.75,
+                              child: Card(
+                                  // margin: EdgeInsets.all(10),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Text('Mathematics'),
+                                        Container(
+                                          padding: EdgeInsets.all(5),
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.rectangle,
+                                            borderRadius:
+                                                BorderRadius.circular(30),
+                                            color: MyColors.customcolor,
+                                          ),
+                                          child: Text(
+                                            '10:00 AM - 1:00 PM',
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
+                                        ),
+                                      ])),
+                            ),
+                          ]),
+                    ),
+                     Container(
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              children: [
+                                Text('SUN'),
+                                //  Text('${dt.hour.toString()}-${dt.hour.toString()}'),
+                                Text('08-02')
+                              ],
+                            ),
+                            SizedBox(width: 10),
+                            TimeLineWigdet(),
+                            SizedBox(width: 10),
+                            Container(
+                              height: 75,
+                              width:  size.width*0.75,
+                              child: Card(
+                                  // margin: EdgeInsets.all(10),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Text('Mathematics'),
+                                        Container(
+                                          padding: EdgeInsets.all(5),
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.rectangle,
+                                            borderRadius:
+                                                BorderRadius.circular(30),
+                                            color: MyColors.customcolor,
+                                          ),
+                                          child: Text(
+                                            '10:00 AM - 1:00 PM',
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
+                                        ),
+                                      ])),
+                            ),
+                          ]),
+                    ),
+                     Container(
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              children: [
+                                Text('SUN'),
+                                //  Text('${dt.hour.toString()}-${dt.hour.toString()}'),
+                                Text('08-02')
+                              ],
+                            ),
+                            SizedBox(width: 10),
+                            TimeLineWigdet(),
+                            SizedBox(width: 10),
+                            Container(
+                              height: 75,
+                              width:  size.width*0.75,
+                              child: Card(
+                                  // margin: EdgeInsets.all(10),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Text('Mathematics'),
+                                        Container(
+                                          padding: EdgeInsets.all(5),
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.rectangle,
+                                            borderRadius:
+                                                BorderRadius.circular(30),
+                                            color: MyColors.customcolor,
+                                          ),
+                                          child: Text(
+                                            '10:00 AM - 1:00 PM',
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
+                                        ),
+                                      ])),
+                            ),
+                          ]),
+                    ),
+                     Container(
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              children: [
+                                Text('SUN'),
+                                //  Text('${dt.hour.toString()}-${dt.hour.toString()}'),
+                                Text('08-02')
+                              ],
+                            ),
+                            SizedBox(width: 10),
+                            TimeLineWigdet(),
+                            SizedBox(width: 10),
+                            Container(
+                              height: 75,
+                              width:  size.width*0.75,
                               child: Card(
                                   // margin: EdgeInsets.all(10),
                                   shape: RoundedRectangleBorder(
@@ -287,8 +428,8 @@ class ExaminationSchedule extends StatelessWidget {
                             TimeLineWigdet(),
                             SizedBox(width: 10),
                             Container(
-                              height: size.height * 0.1,
-                              width: 250,
+                              height: 75,
+                              width:  size.width*0.75,
                               child: Card(
                                 // margin: EdgeInsets.all(10),
                                 shape: RoundedRectangleBorder(
@@ -333,8 +474,8 @@ class ExaminationSchedule extends StatelessWidget {
                             TimeLineWigdet(),
                             SizedBox(width: 10),
                             Container(
-                              height: size.height * 0.1,
-                              width: 250,
+                              height: 75,
+                              width:  size.width*0.75,
                               child: Card(
                                   // margin: EdgeInsets.all(10),
                                   shape: RoundedRectangleBorder(

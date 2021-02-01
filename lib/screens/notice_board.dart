@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:schoolmanagementapp/color/colors.dart';
 
 class NoticeBoardPage extends StatelessWidget {
   @override
@@ -24,10 +23,7 @@ class NoticeBoardPage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: null,
-            icon: Icon(
-              Icons.alarm,
-              color:  MyColors.purplecolor,
-            ),
+            icon:  Image.asset('assets/Assets/nitificationicon.png'),
           )
         ],
       

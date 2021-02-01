@@ -26,10 +26,10 @@ class ExaminationPage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: null,
-            icon: Icon(
-              Icons.alarm,
-              color:  MyColors.purplecolor,
-            ),
+            icon: Image.asset('assets/Assets/nitificationicon.png')
+              
+             
+            
           )
         ],
       ),
@@ -138,7 +138,7 @@ class _ExaminationCardWidgetState extends State<ExaminationCardWidget> {
             height: 20,
             width: 20,
             decoration: BoxDecoration(
-                shape: BoxShape.circle, color:  MyColors.purplecolor),
+                shape: BoxShape.circle, color:  MyColors.customcolor),
             child: Center(
               child: Icon(
                 Icons.arrow_forward_ios,
