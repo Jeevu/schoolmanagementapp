@@ -2,9 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:schoolmanagementapp/color/colors.dart';
-import 'package:schoolmanagementapp/screens/examination_page.dart';
 import 'package:schoolmanagementapp/widgets/custom_paint.dart';
-import 'package:intl/intl.dart';
 
 class ExaminationSchedule extends StatelessWidget {
   //final name;
@@ -14,21 +12,14 @@ class ExaminationSchedule extends StatelessWidget {
 
   //ExaminationSchedule({this.name, this.date});
   @override
-  Widget build(BuildContext context) {
-//     final Map arguments = ModalRoute.of(context).settings.arguments as Map;
-    //   final ExaminationSchedule data = arguments['myData'];
-    
+  Widget build(BuildContext context) { 
     var size = MediaQuery.of(context).size;
-    // var newFormat = DateTime.parse("2020-08-03 10:00:00Z");
-    // print(newFormat.day);
-    // print(dt.add(new Duration(days: 12)).day);
-    // print(dt.month.toString());
-   
+    print( size.height*0.1);
     return Scaffold(
       body: SafeArea(
           child: SingleChildScrollView(
         child: Container(
-          // padding: EdgeInsets.symmetric(horizontal: size.width * 0.01),
+          
           child: Column(children: [
             Padding(
               padding: EdgeInsets.only(top: size.height * 0.02),
@@ -38,10 +29,6 @@ class ExaminationSchedule extends StatelessWidget {
                 height: size.height * 0.091,
                 child: LayoutBuilder(
                   builder: (context, constraints) {
-                    print(constraints.maxHeight * 0.9);
-                    print(
-                      constraints.maxHeight * 0.8,
-                    );
                     return Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -51,11 +38,11 @@ class ExaminationSchedule extends StatelessWidget {
                             Icons.arrow_back,
                             size: 30,
                           ),
-                          // size: 30,
+                        
                           color: Color.fromRGBO(44, 44, 44, 1),
                           onPressed: () {
-                            // ignore: unnecessary_statements
-                            null;
+                            Navigator.pop(context);
+                           
                           },
                         ),
                         // SizedBox(
@@ -79,7 +66,8 @@ class ExaminationSchedule extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.only(top:10),
                   width: size.width * 0.8,
-                  height: size.height*0.07,
+                  
+                  height:64,     
                   child: Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
@@ -200,7 +188,7 @@ class ExaminationSchedule extends StatelessWidget {
                             SizedBox(width: 10),
                             Container(
                               height: 75,
-                              width: size.width*0.75,
+                              width: size.width*0.7,
                               child: Card(
                                   // margin: EdgeInsets.all(10),
                                   shape: RoundedRectangleBorder(
@@ -246,7 +234,7 @@ class ExaminationSchedule extends StatelessWidget {
                             SizedBox(width: 10),
                             Container(
                               height: 75,
-                              width:  size.width*0.75,
+                              width:  size.width*0.7,
                               child: Card(
                                   // margin: EdgeInsets.all(10),
                                   shape: RoundedRectangleBorder(
@@ -292,7 +280,7 @@ class ExaminationSchedule extends StatelessWidget {
                             SizedBox(width: 10),
                             Container(
                               height: 75,
-                              width:  size.width*0.75,
+                              width:  size.width*0.7,
                               child: Card(
                                   // margin: EdgeInsets.all(10),
                                   shape: RoundedRectangleBorder(
@@ -338,7 +326,7 @@ class ExaminationSchedule extends StatelessWidget {
                             SizedBox(width: 10),
                             Container(
                               height: 75,
-                              width:  size.width*0.75,
+                              width:  size.width*0.7,
                               child: Card(
                                   // margin: EdgeInsets.all(10),
                                   shape: RoundedRectangleBorder(
@@ -384,7 +372,7 @@ class ExaminationSchedule extends StatelessWidget {
                             SizedBox(width: 10),
                             Container(
                               height: 75,
-                              width:  size.width*0.75,
+                              width:  size.width*0.7,
                               child: Card(
                                   // margin: EdgeInsets.all(10),
                                   shape: RoundedRectangleBorder(
@@ -429,7 +417,7 @@ class ExaminationSchedule extends StatelessWidget {
                             SizedBox(width: 10),
                             Container(
                               height: 75,
-                              width:  size.width*0.75,
+                              width:  size.width*0.7,
                               child: Card(
                                 // margin: EdgeInsets.all(10),
                                 shape: RoundedRectangleBorder(
@@ -475,7 +463,7 @@ class ExaminationSchedule extends StatelessWidget {
                             SizedBox(width: 10),
                             Container(
                               height: 75,
-                              width:  size.width*0.75,
+                              width:  size.width*0.7,
                               child: Card(
                                   // margin: EdgeInsets.all(10),
                                   shape: RoundedRectangleBorder(
@@ -515,6 +503,8 @@ class ExaminationSchedule extends StatelessWidget {
     class ExamType {
       final String name;
       final String date;
+
+  static ExamType arguments;
 
       ExamType(this.name, this.date);
     }

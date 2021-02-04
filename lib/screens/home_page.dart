@@ -1,6 +1,5 @@
 import 'package:schoolmanagementapp/color/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:schoolmanagementapp/screens/examination_schedule.dart';
 import 'package:schoolmanagementapp/screens/examination_page.dart';
 import 'package:schoolmanagementapp/screens/notice_board.dart';
 import 'package:schoolmanagementapp/screens/profile_page.dart';
@@ -11,14 +10,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  ExamType arguments;
+  //ExamType arguments;
   int _currentindex = 2;
   List<Widget> _pages = <Widget>[
     ExaminationPage(),
     NoticeBoardPage(),
     Home(),
     ProfilePage(),
-    //ExaminationSchedule(),
+    EditPage(),
   ];
 
   @override
@@ -35,7 +34,8 @@ class _HomePageState extends State<HomePage> {
         child: BottomNavigationBar(
           selectedItemColor: MyColors.customcolor,
           unselectedItemColor: MyColors.customcolor,
-          selectedFontSize: 12,
+          selectedFontSize: 14,
+         // selectedIconTheme: IconThemeData.fallback(),
           //  unselectedFontSize: ,
           showUnselectedLabels: true,
           unselectedLabelStyle: TextStyle(color: MyColors.customcolor),
@@ -83,6 +83,14 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+class EditPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
+    );
+  }
+}
 
 class Home extends StatefulWidget {
   @override
@@ -121,10 +129,7 @@ class HomeState extends State<Home> {
                 padding: EdgeInsets.fromLTRB(0, 0, 15, 0),
                 child: IconButton(
                   icon:  Image.asset('assets/Assets/nitificationicon.png'),
-                  onPressed: null,
-                  
-                
-                  
+                  onPressed: null, 
                 ))
           ]),
       body: SingleChildScrollView(
@@ -145,14 +150,15 @@ class HomeState extends State<Home> {
             children: [
               Card(
                 child: Container(
-                  height: deviceSize.height * 0.63,
+                  height: deviceSize.height * 0.57,
                   width: deviceSize.width * 0.95,
                   padding: EdgeInsets.fromLTRB(2, 15, 2, 5),
                   child: SingleChildScrollView(
+                    padding: EdgeInsets.only(top:5),
                     child: Wrap(
                       alignment: WrapAlignment.spaceEvenly,
-                      spacing: deviceSize.height * 0.07,
-                      runSpacing: deviceSize.height * 0.03,
+                      spacing: deviceSize.height * 0.04,
+                      runSpacing: deviceSize.height * 0.01,
                       children: [
                         //Change Icon and function for each chip
                         InkWell(
@@ -315,7 +321,7 @@ class HomeState extends State<Home> {
 
   drawChip(String text, Image ic, var deviceSize) {
     return Container(
-      width: deviceSize.width * 0.21,
+      width: deviceSize.width * 0.23,
       child: Column(
         children: [
           Container(
@@ -331,7 +337,7 @@ class HomeState extends State<Home> {
             decoration: BoxDecoration(
                 shape: BoxShape.circle, color: MyColors.customcolor),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Text(
             text,
             style: TextStyle(
@@ -339,7 +345,7 @@ class HomeState extends State<Home> {
                 fontWeight: FontWeight.w800,
                 fontSize: 13),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 20),
           //    ],
           //   ),
         ],

@@ -5,6 +5,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    print(size.height*0.1);
     return Scaffold(
           body: SafeArea(
         child: Container(
@@ -34,8 +35,7 @@ class ProfilePage extends StatelessWidget {
                             // size: 30,
                             color: Color.fromRGBO(44, 44, 44, 1),
                             onPressed: () {
-                              // ignore: unnecessary_statements
-                              null;
+                              Navigator.pop(context);
                             },
                           ),
                           // SizedBox(
@@ -53,8 +53,8 @@ class ProfilePage extends StatelessWidget {
                                         color: Colors.white),
                                   ),
                                   Container(
-                                    height: 60,
-                                    width: 60,
+                                    height: size.height*0.1,
+                                    width: size.height*0.1,
                                     decoration: BoxDecoration(
                                         color: Colors.white,
                                         borderRadius: BorderRadius.circular(300),
