@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:schoolmanagementapp/color/colors.dart';
+import 'package:schoolmanagementapp/screens/app.dart';
 import 'package:schoolmanagementapp/screens/examination_schedule.dart';
 
 class ExaminationPage extends StatelessWidget {
@@ -52,6 +53,8 @@ class _ExaminationCardState extends State<ExaminationCard> {
   @override
   Widget build(BuildContext context) {
     var items = List<Widget>();
+    AppState.currentTab=0;
+    
     var carditems = [
       [
         "First Term Examination",
@@ -101,6 +104,7 @@ class _ExaminationCardState extends State<ExaminationCard> {
         ),
       );
     }  
+
     return Column(
       children: items,
     );
@@ -149,8 +153,8 @@ class _ExaminationCardWidgetState extends State<ExaminationCardWidget> {
           ),
           onTap: (){
            
-            
-            Navigator.pushNamed(context, '/examinationschedule',arguments: ExamType(widget.type[0],widget.type[1]));
+           Navigator.of(context).push(MaterialPageRoute(builder:(context)=>ExaminationSchedule( ExamType(widget.type[0],widget.type[1])) )); 
+          //  Navigator.pushNamed(context, '/examinationschedule',arguments: ExamType(widget.type[0],widget.type[1]));
           }),
         ));
       

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:schoolmanagementapp/routes/route.dart';
+import 'package:schoolmanagementapp/screens/app.dart';
+import 'package:schoolmanagementapp/screens/home_page.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -9,15 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       
-    home:Scaffold(
-      backgroundColor: Colors.white,
-    body:
-    MyRoute(),
-    ),
-    debugShowCheckedModeBanner: false,
-    
-     
-    
+    home:App(),
      
     );
   }

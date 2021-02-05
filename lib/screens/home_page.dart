@@ -1,94 +1,16 @@
 import 'package:schoolmanagementapp/color/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:schoolmanagementapp/screens/app.dart';
 import 'package:schoolmanagementapp/screens/examination_page.dart';
+import 'package:schoolmanagementapp/screens/examination_schedule.dart';
 import 'package:schoolmanagementapp/screens/notice_board.dart';
 import 'package:schoolmanagementapp/screens/profile_page.dart';
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
 
-class _HomePageState extends State<HomePage> {
-  //ExamType arguments;
-  int _currentindex = 2;
-  List<Widget> _pages = <Widget>[
-    ExaminationPage(),
-    NoticeBoardPage(),
-    Home(),
-    ProfilePage(),
-    EditPage(),
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: IndexedStack(
-        index: _currentindex,
-        children: _pages,
-        //Home(),
-      ),
-
-      // persistentFooterButtons: [],
-      bottomNavigationBar: Container(
-        child: BottomNavigationBar(
-          selectedItemColor: MyColors.customcolor,
-          unselectedItemColor: MyColors.customcolor,
-          selectedFontSize: 14,
-         // selectedIconTheme: IconThemeData.fallback(),
-          //  unselectedFontSize: ,
-          showUnselectedLabels: true,
-          unselectedLabelStyle: TextStyle(color: MyColors.customcolor),
-          type: BottomNavigationBarType.fixed,
-          elevation: 0.0,
-          currentIndex: _currentindex,
-          onTap: (int index) {
-            setState(() {
-              _currentindex = index;
-            });
-          },
-          items: [
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/Assets/syllabusicon.png'),
-
-              //  Icon(
-              //   Icons.home,
-              //   // color: Colors.black,
-              // ),
-              label: 'Syllabus',
-              //  backgroundColor: Colors.black
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/Assets/noticeicon.png'),
-              label: 'Notice',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-                //     color: Colors.black,
-              ),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/Assets/profileicon.png'),
-              label: 'Profile',
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/Assets/editicon.png'),
-              label: 'Edit',
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
 class EditPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
-    );
+    return Container();
   }
 }
 
@@ -128,8 +50,8 @@ class HomeState extends State<Home> {
             Padding(
                 padding: EdgeInsets.fromLTRB(0, 0, 15, 0),
                 child: IconButton(
-                  icon:  Image.asset('assets/Assets/nitificationicon.png'),
-                  onPressed: null, 
+                  icon: Image.asset('assets/Assets/nitificationicon.png'),
+                  onPressed: null,
                 ))
           ]),
       body: SingleChildScrollView(
@@ -154,7 +76,7 @@ class HomeState extends State<Home> {
                   width: deviceSize.width * 0.95,
                   padding: EdgeInsets.fromLTRB(2, 15, 2, 5),
                   child: SingleChildScrollView(
-                    padding: EdgeInsets.only(top:5),
+                    padding: EdgeInsets.only(top: 5),
                     child: Wrap(
                       alignment: WrapAlignment.spaceEvenly,
                       spacing: deviceSize.height * 0.04,
@@ -225,12 +147,17 @@ class HomeState extends State<Home> {
                           },
                         ),
                         InkWell(
-                          child: drawChip(
-                              "Assignments",
-                              Image.asset('assets/Home-Icons/student.png'),
-                              deviceSize),
-                          onTap: null,
-                        ),
+                            child: drawChip(
+                                "Assignments",
+                                Image.asset('assets/Home-Icons/student.png'),
+                                deviceSize),
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => ExaminationPage(),
+                                ),
+                              );
+                            }),
                       ],
                     ),
                   ),
