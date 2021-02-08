@@ -1,30 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:schoolmanagementapp/color/colors.dart';
-import 'package:schoolmanagementapp/screens/app.dart';
 import 'package:schoolmanagementapp/screens/tabItems.dart';
 
 class BottomNavigation extends StatelessWidget {
-  
   @override
-  BottomNavigation({this.onSelectTab,this.tabs});
+  BottomNavigation({this.onSelectTab, this.tabs, this.defaultTab});
   final ValueChanged<int> onSelectTab;
+  final int defaultTab;
   final List<TabItem> tabs;
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-     // selectedFontSize: ,
-     // unselectedFontSize: 12,
-     // selectedIconTheme: IconThemeData(color: MyColors.customcolor,size:16,opacity: 1 ),
-     // unselectedIconTheme:  IconThemeData(color:Colors.blueGrey[400],size:14),
-      selectedLabelStyle: TextStyle(color: MyColors.customcolor,fontSize: 14,),
-      unselectedLabelStyle: TextStyle(color: MyColors.customcolor,fontSize: 14),
+      currentIndex: defaultTab,
+      selectedIconTheme: IconThemeData(size: 24),
       selectedItemColor: MyColors.customcolor,
-      unselectedItemColor: MyColors.customcolor,
       elevation: 30,
-      iconSize: 26,
-    //  selectedLabelStyle: TextStyle(color: Colors.grey),
-      
-      type: BottomNavigationBarType.fixed,
-     items: tabs
+      iconSize: 22,
+      type: BottomNavigationBarType.shifting,
+      items: tabs
           .map(
             (e) => _buildItem(
               index: e.getIndex(),
@@ -39,27 +31,12 @@ class BottomNavigation extends StatelessWidget {
     );
   }
 
-  BottomNavigationBarItem _buildItem(
-
-      {int index, String icon, String name}) {
-       
-        
+  BottomNavigationBarItem _buildItem({int index, String icon, String name}) {
     return BottomNavigationBarItem(
-     
       icon: Image.asset(
-          icon,
-          color: _tabColor(index:index),
-          
+        icon,
       ),
       label: name,
     );
-   
-    
   }
-      Color _tabColor({int index}) {
-      
-    return AppState.currentTab == index ? MyColors.customcolor : Colors.grey;
-  }
-  }
-
- 
+}

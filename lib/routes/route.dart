@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:schoolmanagementapp/screens/examination_page.dart';
 import 'package:schoolmanagementapp/screens/examination_schedule.dart';
-import 'package:schoolmanagementapp/screens/home_page.dart';
 import 'package:schoolmanagementapp/screens/notice_board.dart';
 import 'package:schoolmanagementapp/screens/profile_page.dart';
 

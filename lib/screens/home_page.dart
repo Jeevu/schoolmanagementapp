@@ -1,10 +1,8 @@
 import 'package:schoolmanagementapp/color/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:schoolmanagementapp/screens/app.dart';
+import 'package:schoolmanagementapp/screens/bottomNavigation.dart';
 import 'package:schoolmanagementapp/screens/examination_page.dart';
-import 'package:schoolmanagementapp/screens/examination_schedule.dart';
-import 'package:schoolmanagementapp/screens/notice_board.dart';
-import 'package:schoolmanagementapp/screens/profile_page.dart';
+
 
 
 class EditPage extends StatelessWidget {
@@ -152,6 +150,10 @@ class HomeState extends State<Home> {
                                 Image.asset('assets/Home-Icons/student.png'),
                                 deviceSize),
                             onTap: () {
+                              setState(() {
+                                BottomNavigation(defaultTab: 0,);
+                               print("hello!!");
+                              });
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: (context) => ExaminationPage(),
@@ -164,7 +166,6 @@ class HomeState extends State<Home> {
                 ),
               ),
               Wrap(
-                // spacing: 20,
                 children: [
                   InkWell(
                     child: Card(
