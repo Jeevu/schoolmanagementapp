@@ -1,6 +1,7 @@
 import 'package:schoolmanagementapp/color/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:schoolmanagementapp/screens/bottomNavigation.dart';
+import 'package:schoolmanagementapp/screens/events_page.dart';
 import 'package:schoolmanagementapp/screens/examination_page.dart';
 
 
@@ -124,7 +125,16 @@ class HomeState extends State<Home> {
                               "Events",
                               Image.asset('assets/Home-Icons/calendar.png'),
                               deviceSize),
-                          onTap: null,
+                          onTap:  () {
+                              setState(() {
+                                BottomNavigation(defaultTab: 0,);
+                              });
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => EventPage(),
+                                ),
+                              );
+                            },
                         ),
                         InkWell(
                           child: drawChip(
