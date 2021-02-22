@@ -14,7 +14,7 @@ class App extends StatefulWidget {
 class AppState extends State<App> {
 static int currentTab =2;
 final List<TabItem> tabs =[
-  TabItem(tabName: 'Syllabus', imageIcon:  'assets/Assets/syllabusicon.png', page: ExaminationPage()),
+  TabItem(tabName: 'Syllabus', imageIcon:  'assets/Assets/syllabusicon.png', page: null,),
   TabItem(tabName: 'Notice', imageIcon: 'assets/Assets/noticeicon.png', page: NoticeBoardPage()),
   TabItem(tabName: 'Home', imageIcon: 'assets/Assets/reading-book.png', page: Home()),
   TabItem(tabName: 'Profile', imageIcon:'assets/Assets/profileicon.png', page: ProfilePage()),

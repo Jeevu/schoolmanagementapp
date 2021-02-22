@@ -4,6 +4,8 @@ import 'package:schoolmanagementapp/screens/bottomNavigation.dart';
 import 'package:schoolmanagementapp/screens/events_page.dart';
 import 'package:schoolmanagementapp/screens/examination_page.dart';
 import 'package:schoolmanagementapp/screens/class_routine.dart';
+import 'package:schoolmanagementapp/screens/notice_board.dart';
+import 'package:schoolmanagementapp/screens/profile_page.dart';
 
 
 
@@ -108,9 +110,17 @@ class HomeState extends State<Home> {
                               "Examination",
                               Image.asset('assets/Home-Icons/quiz.png'),
                               deviceSize),
-                          onTap: () {
-                            Navigator.pushNamed(context, '/examinationpage');
-                          },
+                          onTap:  () {
+                              setState(() {
+                                BottomNavigation(defaultTab: 0,);
+                               print("hello!!");
+                              });
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => ExaminationPage(),
+                                ),
+                              );
+                            }
                         ),
                         InkWell(
                           child: drawChip(
@@ -148,35 +158,41 @@ class HomeState extends State<Home> {
                               "Notice Board",
                               Image.asset('assets/Home-Icons/noticeboard.png'),
                               deviceSize),
-                          onTap: () {
-                            Navigator.pushNamed(context, '/noticeboard');
-                          },
-                        ),
-                        InkWell(
-                          child: drawChip(
-                              "Profile",
-                              Image.asset('assets/Home-Icons/reading-book.png'),
-                              deviceSize),
-                          onTap: () {
-                            Navigator.pushNamed(context, '/profilepage');
-                          },
-                        ),
-                        InkWell(
-                            child: drawChip(
-                                "Assignments",
-                                Image.asset('assets/Home-Icons/student.png'),
-                                deviceSize),
-                            onTap: () {
+                          onTap:  () {
                               setState(() {
                                 BottomNavigation(defaultTab: 0,);
                                print("hello!!");
                               });
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => ExaminationPage(),
+                                  builder: (context) => NoticeBoardPage(),
                                 ),
                               );
-                            }),
+                            }
+                        ),
+                        InkWell(
+                          child: drawChip(
+                              "Profile",
+                              Image.asset('assets/Home-Icons/reading-book.png'),
+                              deviceSize),
+                          onTap:  () {
+                              setState(() {
+                                BottomNavigation(defaultTab: 0,);
+                               print("hello!!");
+                              });
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => ProfilePage(),
+                                ),
+                              );
+                            }
+                        ),
+                        InkWell(
+                            child: drawChip(
+                                "Assignments",
+                                Image.asset('assets/Home-Icons/student.png'),
+                                deviceSize),
+                            onTap:null),
                       ],
                     ),
                   ),
