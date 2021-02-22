@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:schoolmanagementapp/screens/bottomNavigation.dart';
 import 'package:schoolmanagementapp/screens/events_page.dart';
 import 'package:schoolmanagementapp/screens/examination_page.dart';
+import 'package:schoolmanagementapp/screens/class_routine.dart';
 
 
 
@@ -87,7 +88,13 @@ class HomeState extends State<Home> {
                               "Class Routine",
                               Image.asset('assets/Home-Icons/routine.png'),
                               deviceSize),
-                          onTap: null,
+                          onTap:  () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => ClassRoutine(),
+                                ),
+                              );
+                            },
                         ),
                         InkWell(
                           child: drawChip(
