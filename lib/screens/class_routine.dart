@@ -61,86 +61,101 @@ class _ClassRoutineState extends State<ClassRoutine>
               ),
             ),
           ),
-          Card(
-              margin: EdgeInsets.all(0.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text('Class: One| Section: B'),
-                  Container(
-                    height: 10,
-                  ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
-                    child: TabBar(
-                        indicator: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                          color: MyColors.customcolor,
-                        ),
-                        unselectedLabelColor: Colors.black,
-                        labelStyle: TextStyle(color: Colors.black),
-                        controller: _tabController,
-                        tabs: [
-                          Column(children: [
-                            SizedBox(height: 8),
-                            Text(
-                              'SUN',
-                              style: TextStyle(fontSize: 9),
-                            ),
-                            SizedBox(height: 8),
-                            CircleWidget(),
+       
+            
+            Card(
+                margin: EdgeInsets.all(0.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    
+                      Container(
+                        width: 170,
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: Row(children:[
+                            Text('Class: One| Section: B'),
+                            Icon(Icons.arrow_drop_down_sharp),
+                            ]),
+                          ),
+                      ),
+                    Container(
+                      height: 10,
+                    ),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
+                      child: TabBar(
+                          indicator: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            color: MyColors.customcolor,
+                          ),
+                          unselectedLabelColor: Colors.black,
+                          labelStyle: TextStyle(color: Colors.black),
+                          controller: _tabController,
+                          tabs: [
+                            Column(children: [
+                              SizedBox(height: 8),
+                              Text(
+                                'SUN',
+                                style: TextStyle(fontSize: 9),
+                              ),
+                              SizedBox(height: 8),
+                              CircleWidget(),
+                            ]),
+                            Column(children: [
+                              SizedBox(height: 8),
+                              Text(
+                                'MON',
+                                style: TextStyle(fontSize: 9),
+                              ),
+                              SizedBox(height: 8),
+                              CircleWidget(),
+                            ]),
+                            Column(children: [
+                              SizedBox(height: 8),
+                              Text(
+                                'TUE',
+                                style: TextStyle(fontSize: 9),
+                              ),
+                              SizedBox(height: 8),
+                              CircleWidget(),
+                            ]),
+                            Column(children: [
+                              SizedBox(height: 8),
+                              Text(
+                                'WED',
+                                style: TextStyle(fontSize: 9),
+                              ),
+                              SizedBox(height: 8),
+                              CircleWidget(),
+                            ]),
+                            Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox(height: 8),
+                                  Text(
+                                    'THUR',
+                                    style: TextStyle(fontSize: 9),
+                                  ),
+                                  SizedBox(height: 8),
+                                  CircleWidget(),
+                                ]),
+                            Column(children: [
+                              SizedBox(height: 8),
+                              Text(
+                                'FRI',
+                                style: TextStyle(fontSize: 9),
+                              ),
+                              SizedBox(height: 8),
+                              CircleWidget(),
+                            ]),
                           ]),
-                          Column(children: [
-                            SizedBox(height: 8),
-                            Text(
-                              'MON',
-                              style: TextStyle(fontSize: 9),
-                            ),
-                            SizedBox(height: 8),
-                            CircleWidget(),
-                          ]),
-                          Column(children: [
-                            SizedBox(height: 8),
-                            Text(
-                              'TUE',
-                              style: TextStyle(fontSize: 9),
-                            ),
-                            SizedBox(height: 8),
-                            CircleWidget(),
-                          ]),
-                          Column(children: [
-                            SizedBox(height: 8),
-                            Text(
-                              'WED',
-                              style: TextStyle(fontSize: 9),
-                            ),
-                            SizedBox(height: 8),
-                            CircleWidget(),
-                          ]),
-                          Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                SizedBox(height: 8),
-                                Text(
-                                  'THUR',
-                                  style: TextStyle(fontSize: 9),
-                                ),
-                                SizedBox(height: 8),
-                                CircleWidget(),
-                              ]),
-                          Column(children: [
-                            SizedBox(height: 8),
-                            Text(
-                              'FRI',
-                              style: TextStyle(fontSize: 9),
-                            ),
-                            SizedBox(height: 8),
-                            CircleWidget(),
-                          ]),
-                        ]),
-                  ),
-                ],
-              )),
+                    ),
+                  ],
+                )),
+          
           Expanded(
             child: TabBarView(controller: _tabController, children: [
               RoutineTimeline(),
