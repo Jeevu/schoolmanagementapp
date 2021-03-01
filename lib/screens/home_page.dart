@@ -6,6 +6,7 @@ import 'package:schoolmanagementapp/screens/examination_page.dart';
 import 'package:schoolmanagementapp/screens/class_routine.dart';
 import 'package:schoolmanagementapp/screens/notice_board.dart';
 import 'package:schoolmanagementapp/screens/profile_page.dart';
+import 'package:schoolmanagementapp/screens/results_page.dart';
 
 
 
@@ -135,7 +136,17 @@ class HomeState extends State<Home> {
                               "Results",
                               Image.asset('assets/Home-Icons/tasks.png'),
                               deviceSize),
-                          onTap: null,
+                          onTap:  () {
+                              setState(() {
+                                BottomNavigation(defaultTab: 0,);
+                               print("hello!!");
+                              });
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => ResultPage(),
+                                ),
+                              );
+                            },
                         ),
                         InkWell(
                           child: drawChip(

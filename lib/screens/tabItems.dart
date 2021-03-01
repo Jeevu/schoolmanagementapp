@@ -13,7 +13,8 @@ class TabItem {
     @required this.tabName,
     @required this.imageIcon,
     @required Widget page,
-  }) {
+  }) 
+  {
     _page = page;
   }
   void setIndex(int i) {
