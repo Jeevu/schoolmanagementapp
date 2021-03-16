@@ -7,6 +7,7 @@ import 'package:schoolmanagementapp/screens/class_routine.dart';
 import 'package:schoolmanagementapp/screens/notice_board.dart';
 import 'package:schoolmanagementapp/screens/profile_page.dart';
 import 'package:schoolmanagementapp/screens/results_page.dart';
+import 'package:schoolmanagementapp/screens/syllabus_page.dart';
 
 
 
@@ -128,7 +129,13 @@ class HomeState extends State<Home> {
                               "Syllabus",
                               Image.asset('assets/Home-Icons/syllabus.png'),
                               deviceSize),
-                          onTap: null,
+                          onTap:  () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => SyllabusPage(),
+                                ),
+                              );
+                            },
                         ),
 
                         InkWell(

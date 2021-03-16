@@ -4,6 +4,7 @@ import 'package:schoolmanagementapp/screens/examination_page.dart';
 import 'package:schoolmanagementapp/screens/home_page.dart';
 import 'package:schoolmanagementapp/screens/notice_board.dart';
 import 'package:schoolmanagementapp/screens/profile_page.dart';
+import 'package:schoolmanagementapp/screens/syllabus_page.dart';
 import 'package:schoolmanagementapp/screens/tabItems.dart';
 
 class App extends StatefulWidget {
@@ -14,7 +15,7 @@ class App extends StatefulWidget {
 class AppState extends State<App> {
 static int currentTab =2;
 final List<TabItem> tabs =[
-  TabItem(tabName: 'Syllabus', imageIcon:  'assets/Assets/syllabusicon.png', page: null,),
+  TabItem(tabName: 'Syllabus', imageIcon:  'assets/Assets/syllabusicon.png', page: SyllabusPage(),),
   TabItem(tabName: 'Notice', imageIcon: 'assets/Assets/noticeicon.png', page: NoticeBoardPage()),
   TabItem(tabName: 'Home', imageIcon: 'assets/Assets/reading-book.png', page: Home()),
   TabItem(tabName: 'Profile', imageIcon:'assets/Assets/profileicon.png', page: ProfilePage()),
@@ -27,7 +28,6 @@ final List<TabItem> tabs =[
   }
   void _selectTab(int index) {
     if (index == currentTab) {
-      print("Same Tab"+currentTab.toString());
       tabs[index].key.currentState.popUntil((route) => route.isFirst);
     } else {
       setState(() => currentTab = index);

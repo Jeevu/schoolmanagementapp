@@ -3,6 +3,7 @@ import 'package:schoolmanagementapp/screens/examination_page.dart';
 import 'package:schoolmanagementapp/screens/examination_schedule.dart';
 import 'package:schoolmanagementapp/screens/notice_board.dart';
 import 'package:schoolmanagementapp/screens/profile_page.dart';
+import 'package:schoolmanagementapp/screens/syllabus_page.dart';
 
 
 class MyRoute extends StatelessWidget {
@@ -15,6 +16,7 @@ class MyRoute extends StatelessWidget {
         '/examinationschedule':(context)=>ExaminationSchedule(ModalRoute.of(context).settings.arguments),
         '/noticeboard':(context)=>NoticeBoardPage(),
         '/profilepage':(context)=>ProfilePage(),
+        '/syllabuspage':(context)=>SyllabusPage(),
       },
     );
   }
