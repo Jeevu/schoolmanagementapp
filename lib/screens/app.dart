@@ -50,7 +50,7 @@ final List<TabItem> tabs =[
       },
       child: Scaffold(
         body: IndexedStack(
-          index: currentTab,
+          index: currentTab,    
           children: tabs.map((e) => e.page).toList(),
         ),
         bottomNavigationBar: Container(

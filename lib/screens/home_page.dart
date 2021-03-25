@@ -1,6 +1,8 @@
 
 import 'package:schoolmanagementapp/color/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:schoolmanagementapp/screens/app.dart';
+import 'package:schoolmanagementapp/screens/assignment_page.dart';
 import 'package:schoolmanagementapp/screens/events_page.dart';
 import 'package:schoolmanagementapp/screens/examination_page.dart';
 import 'package:schoolmanagementapp/screens/class_routine.dart';
@@ -189,7 +191,12 @@ class HomeState extends State<Home> {
                                 "Assignments",
                                 Image.asset('assets/Home-Icons/student.png'),
                                 deviceSize),
-                            onTap:null),
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => AssignmentPage()),
+                              );
+                            }),
                       ],
                     ),
                   ),

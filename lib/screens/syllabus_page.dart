@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fdottedline/fdottedline.dart';
 import 'package:schoolmanagementapp/color/colors.dart';
+import 'package:schoolmanagementapp/screens/home_page.dart';
 
 class SyllabusPage extends StatefulWidget {
   
@@ -37,7 +38,8 @@ class _SyllabusPageState extends State<SyllabusPage> {
                           ),
                           color: Color.fromRGBO(44, 44, 44, 1),
                           onPressed: () {
-                            Navigator.pop(context);
+                           
+                           Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
                           },
                         ),
                         Center(
