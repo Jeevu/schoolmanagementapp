@@ -42,7 +42,6 @@ class _LoginPageState extends State<LoginPage> {
                     Container(
                       child: Form(
                         key: _formkey,
-                       // autovalidateMode: AutovalidateMode.onUserInteraction,
                         child: Column(
                           children: [
                             TextFormField(
@@ -66,7 +65,6 @@ class _LoginPageState extends State<LoginPage> {
                                   labelText: 'Password',
                                   hintText: 'Password'),
                               validator: validatepassword,
-                           //   autovalidateMode: AutovalidateMode.onUserInteraction,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,

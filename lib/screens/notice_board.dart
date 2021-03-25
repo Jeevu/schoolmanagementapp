@@ -123,7 +123,6 @@ class _NoticeListWidgetState extends State<NoticeListWidget> {
                   ),
                 ),
                 Row(
-                  // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Icon(
                       Icons.calendar_today,

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:schoolmanagementapp/widgets/bar_chart_demo.dart';
-import 'package:schoolmanagementapp/widgets/bar_chart_graph.dart';
-
 class ResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

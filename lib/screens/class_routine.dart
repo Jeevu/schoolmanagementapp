@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:schoolmanagementapp/color/colors.dart';
-import 'package:schoolmanagementapp/screens/events_page.dart';
 import 'package:schoolmanagementapp/widgets/custom_paint.dart';
 
 class ClassRoutine extends StatefulWidget {
@@ -32,7 +31,6 @@ class _ClassRoutineState extends State<ClassRoutine>
           Padding(
             padding: EdgeInsets.only(top: size.height * 0.02),
             child: Container(
-              // padding: EdgeInsets.symmetric(horizontal: size.width * 0.02),
               width: double.infinity,
               height: size.height * 0.091,
               child: LayoutBuilder(
@@ -177,12 +175,6 @@ class CircleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        //  color: Colors.red,
-        // Change to your preferred size.
-        // Width and height will be used under "paint" method below.
-        // The canvas accesses it by using size.width, size.height
-        //  height: 75,
-        //    width: 300,
         child: CustomPaint(
           painter: VerticalLine(false),
         ),
@@ -207,10 +199,6 @@ class VerticalLine extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     canvas.drawCircle(Offset(-3.0, 0.0), 0.5, _paint);
     canvas.drawCircle(Offset(3.0, 0.0), 0.5, _paint);
-//canvas.drawLine(Offset(0.0, 15.0), Offset(0.0,80.0), _paint);
-//canvas.drawCircle(Offset(0.0, 85.0), 5, _paint);
-// canvas.drawCircle(Offset(0.0, 55.0), 5, _paint);
-// canvas.drawLine(Offset(0.0, 60), Offset(0.0, 100), _paint);
   }
 
   @override
@@ -232,7 +220,6 @@ class RoutineTimeline extends StatelessWidget {
           children: [
             SizedBox(height: 10),
             Container(
-              // padding: EdgeInsets.only(left: 7),
               child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                 Text(
                   'Time',
@@ -272,15 +259,12 @@ class RoutineTimeline extends StatelessWidget {
                             height: 75,
                             width: size.width * 0.75,
                             child: Card(
-                                // margin: EdgeInsets.all(10),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child: Container(
                                   padding: EdgeInsets.all(15),
                                   child: Column(
-
-                                      // mainAxisAlignment: MainAxisAlignment.spaceAround,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
@@ -328,15 +312,12 @@ class RoutineTimeline extends StatelessWidget {
                             height: 75,
                             width: size.width * 0.75,
                             child: Card(
-                                // margin: EdgeInsets.all(10),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child: Container(
                                   padding: EdgeInsets.all(15),
                                   child: Column(
-
-                                      // mainAxisAlignment: MainAxisAlignment.spaceAround,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
@@ -384,7 +365,6 @@ class RoutineTimeline extends StatelessWidget {
                             height: 75,
                             width: size.width * 0.75,
                             child: Card(
-                                // margin: EdgeInsets.all(10),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
@@ -392,7 +372,6 @@ class RoutineTimeline extends StatelessWidget {
                                   padding: EdgeInsets.all(15),
                                   child: Column(
 
-                                      // mainAxisAlignment: MainAxisAlignment.spaceAround,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
@@ -440,7 +419,6 @@ class RoutineTimeline extends StatelessWidget {
                             height: 75,
                             width: size.width * 0.75,
                             child: Card(
-                                // margin: EdgeInsets.all(10),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
@@ -448,7 +426,6 @@ class RoutineTimeline extends StatelessWidget {
                                   padding: EdgeInsets.all(15),
                                   child: Column(
 
-                                      // mainAxisAlignment: MainAxisAlignment.spaceAround,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
@@ -496,7 +473,6 @@ class RoutineTimeline extends StatelessWidget {
                             height: 75,
                             width: size.width * 0.75,
                             child: Card(
-                                // margin: EdgeInsets.all(10),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
@@ -504,7 +480,6 @@ class RoutineTimeline extends StatelessWidget {
                                   padding: EdgeInsets.all(15),
                                   child: Column(
 
-                                      // mainAxisAlignment: MainAxisAlignment.spaceAround,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
@@ -552,15 +527,12 @@ class RoutineTimeline extends StatelessWidget {
                             height: 75,
                             width: size.width * 0.75,
                             child: Card(
-                                // margin: EdgeInsets.all(10),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child: Container(
                                   padding: EdgeInsets.all(15),
                                   child: Column(
-
-                                      // mainAxisAlignment: MainAxisAlignment.spaceAround,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
@@ -608,15 +580,12 @@ class RoutineTimeline extends StatelessWidget {
                             height: 75,
                             width: size.width * 0.75,
                             child: Card(
-                                // margin: EdgeInsets.all(10),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child: Container(
                                   padding: EdgeInsets.all(15),
                                   child: Column(
-
-                                      // mainAxisAlignment: MainAxisAlignment.spaceAround,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [

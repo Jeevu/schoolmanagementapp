@@ -1,6 +1,6 @@
+
 import 'package:schoolmanagementapp/color/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:schoolmanagementapp/screens/bottomNavigation.dart';
 import 'package:schoolmanagementapp/screens/events_page.dart';
 import 'package:schoolmanagementapp/screens/examination_page.dart';
 import 'package:schoolmanagementapp/screens/class_routine.dart';
@@ -26,11 +26,9 @@ class Home extends StatefulWidget {
 class HomeState extends State<Home> {
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
   bool notify = false;
-
   @override
   Widget build(BuildContext context) {
     var deviceSize = MediaQuery.of(context).size;
-    print(MediaQuery.of(context).size.height * 0.09);
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       resizeToAvoidBottomInset: false,
@@ -70,8 +68,6 @@ class HomeState extends State<Home> {
             ),
           ),
           SizedBox(height: 20),
-
-          //height: double.maxFinite,
           Column(
             children: [
               Card(
@@ -113,10 +109,7 @@ class HomeState extends State<Home> {
                               Image.asset('assets/Home-Icons/quiz.png'),
                               deviceSize),
                           onTap:  () {
-                              setState(() {
-                                BottomNavigation(defaultTab: 0,);
-                               print("hello!!");
-                              });
+                            
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: (context) => ExaminationPage(),
@@ -135,7 +128,8 @@ class HomeState extends State<Home> {
                                   builder: (context) => SyllabusPage(),
                                 ),
                               );
-                            },
+                            
+                          }
                         ),
 
                         InkWell(
@@ -144,10 +138,6 @@ class HomeState extends State<Home> {
                               Image.asset('assets/Home-Icons/tasks.png'),
                               deviceSize),
                           onTap:  () {
-                              setState(() {
-                                BottomNavigation(defaultTab: 0,);
-                               print("hello!!");
-                              });
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: (context) => ResultPage(),
@@ -161,9 +151,6 @@ class HomeState extends State<Home> {
                               Image.asset('assets/Home-Icons/calendar.png'),
                               deviceSize),
                           onTap:  () {
-                              setState(() {
-                                BottomNavigation(defaultTab: 0,);
-                              });
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: (context) => EventPage(),
@@ -177,10 +164,6 @@ class HomeState extends State<Home> {
                               Image.asset('assets/Home-Icons/noticeboard.png'),
                               deviceSize),
                           onTap:  () {
-                              setState(() {
-                                BottomNavigation(defaultTab: 0,);
-                               print("hello!!");
-                              });
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: (context) => NoticeBoardPage(),
@@ -194,10 +177,6 @@ class HomeState extends State<Home> {
                               Image.asset('assets/Home-Icons/reading-book.png'),
                               deviceSize),
                           onTap:  () {
-                              setState(() {
-                                BottomNavigation(defaultTab: 0,);
-                               print("hello!!");
-                              });
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: (context) => ProfilePage(),
@@ -244,11 +223,9 @@ class HomeState extends State<Home> {
                                 color: MyColors.customcolor,
                               ),
                             ),
-                            // SizedBox(width: 9),
                             Text("Morning Prayer",
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500, fontSize: 10)),
-                            // SizedBox(width: 10),
                             Image.asset('assets/Home-Icons/iconplaycircle.png'),
                           ],
                         ),
@@ -278,11 +255,9 @@ class HomeState extends State<Home> {
                                 color: MyColors.customcolor,
                               ),
                             ),
-                            // SizedBox(width: 9),
                             Text("National Anthem",
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500, fontSize: 10)),
-                            // SizedBox(width: 10),
                             Image.asset('assets/Home-Icons/iconplaycircle.png'),
                           ],
                         ),
@@ -308,7 +283,6 @@ class HomeState extends State<Home> {
             width: deviceSize.height * 0.09,
             child: Center(
               child: Container(
-                  //  margin: EdgeInsets.all(20),
                   height: deviceSize.height * 0.042,
                   width: deviceSize.height * 0.042,
                   child: ic),
@@ -329,16 +303,6 @@ class HomeState extends State<Home> {
           //   ),
         ],
       ),
-
-      // height: DeviceSize(context).height*0.095,
-      // width:  DeviceSize(context).height*0.095,
-      // child: Center(
-      //   child: Container(
-      //       //  margin: EdgeInsets.all(20),
-      //       height: 35,
-      //       width: 35,
-      //       child: ic),
-      //   ),
     );
   }
 

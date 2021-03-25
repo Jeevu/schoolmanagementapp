@@ -90,8 +90,6 @@ class ProfilePage extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.all(size.width * 0.04),
                     child: Wrap(spacing: 10, runSpacing: 0.0,
-                        // mainAxisAlignment: MainAxisAlignment.start,
-                        // crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
                             height: 30,
@@ -110,8 +108,6 @@ class ProfilePage extends StatelessWidget {
                                   ),
                                 ]),
                           ),
-
-                          //padding: const EdgeInsets.only(top: ),
                           Divider(
                             color: Colors.grey[200],
                           ),
@@ -132,8 +128,6 @@ class ProfilePage extends StatelessWidget {
                                   ),
                                 ]),
                           ),
-
-                          //padding: const EdgeInsets.only(top: ),
                           Divider(
                             color: Colors.grey[200],
                           ),
@@ -154,8 +148,6 @@ class ProfilePage extends StatelessWidget {
                                   ),
                                 ]),
                           ),
-
-                          //padding: const EdgeInsets.only(top: ),
                           Divider(
                             color: Colors.grey[200],
                           ),
@@ -176,8 +168,6 @@ class ProfilePage extends StatelessWidget {
                                   ),
                                 ]),
                           ),
-
-                          //padding: const EdgeInsets.only(top: ),
                           Divider(
                             color: Colors.grey[200],
                           ),
@@ -198,8 +188,6 @@ class ProfilePage extends StatelessWidget {
                                   ),
                                 ]),
                           ),
-
-                          //padding: const EdgeInsets.only(top: ),
                           Divider(
                             color: Colors.grey[200],
                           ),
@@ -220,8 +208,6 @@ class ProfilePage extends StatelessWidget {
                                   ),
                                 ]),
                           ),
-
-                          //padding: const EdgeInsets.only(top: ),
                           Divider(
                             color: Colors.grey[200],
                           ),
@@ -242,8 +228,6 @@ class ProfilePage extends StatelessWidget {
                                   ),
                                 ]),
                           ),
-
-                          //padding: const EdgeInsets.only(top: ),
                           Divider(
                             color: Colors.grey[200],
                           ),
@@ -264,8 +248,6 @@ class ProfilePage extends StatelessWidget {
                                   ),
                                 ]),
                           ),
-
-                          //padding: const EdgeInsets.only(top: ),
                           Divider(
                             color: Colors.grey[200],
                           ),
@@ -286,8 +268,6 @@ class ProfilePage extends StatelessWidget {
                                   ),
                                 ]),
                           ),
-
-                          //padding: const EdgeInsets.only(top: ),
                           Divider(
                             color: Colors.grey[200],
                           ),

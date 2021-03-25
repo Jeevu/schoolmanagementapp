@@ -5,12 +5,9 @@ import 'package:schoolmanagementapp/color/colors.dart';
 import 'package:schoolmanagementapp/widgets/custom_paint.dart';
 
 class ExaminationSchedule extends StatelessWidget {
-  //final name;
-  //final date;
   final ExamType arguments;
   ExaminationSchedule(this.arguments);
 
-  //ExaminationSchedule({this.name, this.date});
   @override
   Widget build(BuildContext context) { 
     var size = MediaQuery.of(context).size;
@@ -45,9 +42,6 @@ class ExaminationSchedule extends StatelessWidget {
                            
                           },
                         ),
-                        // SizedBox(
-                        //   width: constraints.maxWidth * 0.65,
-                        // ),
                         Center(
                           child: Text(
                             'Examination',

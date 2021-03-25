@@ -3,13 +3,13 @@ import 'package:fdottedline/fdottedline.dart';
 import 'package:schoolmanagementapp/color/colors.dart';
 
 class SyllabusPage extends StatefulWidget {
+  
   @override
   _SyllabusPageState createState() => _SyllabusPageState();
 }
 
 class _SyllabusPageState extends State<SyllabusPage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-    @override
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -42,7 +42,7 @@ class _SyllabusPageState extends State<SyllabusPage> {
                         ),
                         Center(
                           child: Text(
-                            'Examination',
+                            'Syllabus',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -131,6 +131,7 @@ class _SyllabusPageState extends State<SyllabusPage> {
                         color: Colors.white),
                   ),
                 ])),
+                
         Expanded(
           child: Container(
             padding: EdgeInsets.only(left: 5),

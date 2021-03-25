@@ -37,69 +37,62 @@ class EventPage extends StatelessWidget {
             ),
           ),
         ),
-
-       searchBar(),
-       Expanded(
-                child: SingleChildScrollView(child:
-          EventsList(),),
-       ),
+        searchBar(),
+        Expanded(
+          child: SingleChildScrollView(
+            child: EventsList(),
+          ),
+        ),
       ]),
     ));
   }
 }
 
-Widget searchBar(){
-  bool isVisible = true;
-TextEditingController controller = TextEditingController();
+Widget searchBar() {
+  TextEditingController controller = TextEditingController();
 
-   final FocusNode _searchFocus = FocusNode();
-  return  Container(
+  final FocusNode _searchFocus = FocusNode();
+  return Container(
     height: 40,
-        margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
-        padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 20),
-        decoration: BoxDecoration(
-          color: Colors.black38.withAlpha(10),
-          borderRadius: BorderRadius.all(
-            Radius.circular(5),
+    margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+    padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 20),
+    decoration: BoxDecoration(
+      color: Colors.black38.withAlpha(10),
+      borderRadius: BorderRadius.all(
+        Radius.circular(5),
+      ),
+    ),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        Expanded(
+          child: TextField(
+            focusNode: _searchFocus,
+            textAlign: TextAlign.center,
+            decoration: InputDecoration(
+              prefixIcon: Padding(
+                padding: EdgeInsets.only(left: 0),
+                child: Image.asset('assets/Assets/Search.png'),
+              ),
+              hintText: "Search Events",
+              hintStyle:
+                  TextStyle(color: Colors.black.withAlpha(120), fontSize: 12),
+              border: InputBorder.none,
+            ),
+            onChanged: (String keyword) {},
           ),
         ),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Expanded(
-              child: TextField(
-                focusNode: _searchFocus,
-                textAlign:TextAlign.center,
-                decoration: InputDecoration(
-                //  contentPadding: EdgeInsets.symmetric(horizontal: 0,vertical: -5),
-               
-                 prefixIcon: Padding(
-                   padding: EdgeInsets.only(left:0),
-                   child:Image.asset('assets/Assets/Search.png'),),
-                  hintText: "Search Events",
-                  hintStyle: TextStyle(
-                    color: Colors.black.withAlpha(120),
-                    fontSize: 12
-                  ),
-                  border: InputBorder.none,
-                ),
-                onChanged: (String keyword) {
-                },
-              ),
-            ),
-            Icon(
-              Icons.calendar_today,
-              color: MyColors.customcolor,
-              size: 15,
-            )
-          ],
-        ),
-      );
-
+        Icon(
+          Icons.calendar_today,
+          color: MyColors.customcolor,
+          size: 15,
+        )
+      ],
+    ),
+  );
 }
 
-void setState(Null Function() param0) {
-}
+void setState(Null Function() param0) {}
 
 class EventsList extends StatelessWidget {
   @override
@@ -120,7 +113,7 @@ class EventsList extends StatelessWidget {
         '9:00',
         'New Baneshwor Nepal'
       ],
-            [
+      [
         'assets/Assets/culturalprgm.png',
         'Cultural Program',
         '04 Aug 2020',
@@ -134,7 +127,7 @@ class EventsList extends StatelessWidget {
         '9:00',
         'New Baneshwor Nepal'
       ],
-            [
+      [
         'assets/Assets/culturalprgm.png',
         'Cultural Program',
         '04 Aug 2020',
@@ -152,9 +145,8 @@ class EventsList extends StatelessWidget {
     for (var items in eventData) {
       events.add(EventsListWidgt(type: items));
     }
-    return  Column(
-        children: events,
-   
+    return Column(
+      children: events,
     );
   }
 }
