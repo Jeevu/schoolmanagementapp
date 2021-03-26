@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:schoolmanagementapp/color/colors.dart';
+import 'package:schoolmanagementapp/screens/event_details_page.dart';
 
 class EventPage extends StatelessWidget {
   @override
@@ -241,19 +242,24 @@ class _EventsListWidgtState extends State<EventsListWidgt> {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 color: MyColors.customcolor),
-                            child: Row(
-                              children: [
-                                Text(
-                                  'View Details',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 10),
-                                ),
-                                Image.asset(
-                                  'assets/Assets/whiteforwardicon.png',
-                                  height: 15,
-                                  width: 15,
-                                ),
-                              ],
+                            child: GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>EventDetail(EventArgument(widget.type[1],widget.type[2],widget.type[3]))),);
+                              },
+                              child: Row(
+                                children: [
+                                  Text(
+                                    'View Details',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 10),
+                                  ),
+                                  Image.asset(
+                                    'assets/Assets/whiteforwardicon.png',
+                                    height: 15,
+                                    width: 15,
+                                  ),
+                                ],
+                              ),
                             )),
                       ],
                     ),
